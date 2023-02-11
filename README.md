@@ -12,3 +12,6 @@ Windows: `pip install tensorflow`
 
 설치 확인  
 `pip show tensorflow`  
+
+Install TF version 1  
+`pip install tensorflow==1.2.1`  
