@@ -2,6 +2,7 @@ import tensorflow as tf # import 명령어
 
 # tf v1처럼 사용하기
 # Session()은 tf v2에서 지원하지 않는다.
+# placeholder는 tf v2에서 지원하지 않는다.
 import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
 
