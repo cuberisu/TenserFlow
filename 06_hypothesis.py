@@ -3,7 +3,7 @@ import tensorflow as tf # import 명령어
 # tf v1처럼 사용하기
 # Session()은 tf v2에서 지원하지 않는다.
 # random_normal은 tf v2에서 random.normal로 바뀌었다.
-import tensorflow.compat.v1 as tf
+import tensorflow._api.v2.compat.v1 as tf
 tf.disable_v2_behavior()
 
 # 1. Build graph using TF operations
@@ -34,7 +34,9 @@ hypothesis = x_train * W + b
 # cost(W,b) = 1/m * sigma^{m}_{i=1}(H(x^(i)) - y^(i))^2
 
 # cost/Loss function
-# cost 정의
+# cost function(비용함수)&loss function(손실함수) 거의 비슷한 개념
+# 타깃과 예측의 차이를 계산. 손실함수를 최소화하는 것이 목적
+# cost를 정의
 cost = tf.reduce_mean(tf.square(hypothesis - y_train))
 # reduce_mean(array): array의 원소 평균을 내줌
 # square(a - b) = (a - b)^2
